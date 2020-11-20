@@ -1,0 +1,14 @@
+commonLabels:
+- { kind: DeploymentConfig, path: spec/template/metadata/labels, create: true }  
+- { kind: DeploymentConfig, path: spec/selector, create: true }
+
+varReference:
+  - { kind: HorizontalPodAutoscaler, path: spec/scaleTargetRef/name }
+  - { kind: Route, path: spec/host }
+    
+nameReference:
+- kind: Secret
+  version: v1
+  fieldSpecs:
+  - { kind: DeploymentConfig, path: spec/template/spec/volumes/secret/secretName }
+  - { kind: DeploymentConfig, path: spec/volumes/secret/secretName }
