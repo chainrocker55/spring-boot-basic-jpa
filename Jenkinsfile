@@ -30,19 +30,66 @@ kslave params, {
 
         def targetImage = "${DOCKER_REPO}.artifactory.kasikornbank.com:8443/dev/${APP_MODULE}:${GIT_COMMIT}"
         stage('BUILD-DOCKER-IMAGE') {
+            withMavenSetting([
+                    auth  : [credentialsId: JFROG_CREDENTIALS_ID],
+                    config: [
+                            appId: "academy"
+                    ]
+            ]) { xml ->
+                writeFile file: "${WORKSPACE}/settings.xml", text: xml
+            }
             def kanikoParams = [
                     auth  : [
                             [registry: "docker.artifactory.kasikornbank.com:8443", credentialsId: JFROG_CREDENTIALS_ID],
+                            [registry: "common-docker.artifactory.kasikornbank.com:8443", credentialsId: JFROG_CREDENTIALS_ID],
                             [registry: "${DOCKER_REPO}.artifactory.kasikornbank.com:8443", credentialsId: JFROG_CREDENTIALS_ID],
                     ],
                     params: [
                             cacheRepo   : "${DOCKER_REPO}.artifactory.kasikornbank.com:8443/cache",
                             context     : "dir://${WORKSPACE}",
                             destinations: [targetImage],
+//                            dockerfile: "Dockerfile-build"
                     ]
             ]
             container('kaniko') {
                 println '--- use kaniko with parameters ---'
+//                writeFile file: "Dockerfile-build", text: '''
+//                FROM docker.artifactory.kasikornbank.com:8443/maven:3.6.3-jdk-11-openj9 as builder as builder
+//
+//                USER root
+//                ARG http_proxy
+//                ARG https_proxy
+//                ARG no_proxy
+//
+//                ENV http_proxy=http://172.31.97.120:8080
+//                ENV https_proxy=http://172.31.97.120:8080
+//                ENV no_proxy=$no_proxy
+//
+//                WORKDIR /src
+//                COPY pom.xml .
+//                COPY settings.xml .
+//
+//                RUN mvn -s settings.xml dependency:go-offline -B -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
+//
+//                WORKDIR /
+//                COPY pom.xml /pom.xml
+//                COPY src/main /src/main
+//                COPY src/test /src/test
+//                COPY settings.xml /settings.xml
+//
+//                RUN mvn clean install -s settings.xml -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
+//
+//                # Dockerfile
+//                FROM docker.artifactory.kasikornbank.com:8443/openjdk:15-jdk
+//                COPY --from=builder target/restservice-0.0.1-SNAPSHOT.jar .
+//                CMD ["java", "-jar", "restservice-0.0.1-SNAPSHOT.jar"]
+//                '''.stripIndent()
+//
+//                sh '''
+//                    cat Dockerfile
+//                    cat pom.xml
+//                '''
+
                 prettyPrintMap kanikoParams
                 kanikoBuild(kanikoParams)
             }
