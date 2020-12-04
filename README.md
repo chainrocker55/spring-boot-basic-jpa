@@ -8,6 +8,7 @@
       String bookName;
       Integer price;
       int numBook;
+      
 > *Basket Table*
 -     int id;
       List<Book> books;
@@ -17,6 +18,8 @@
 -     int id;
       String firstname;
       String lastname;
+      Basket basket;
+      
 > *Purchase Table*
 -     int id;
       Basket basket;
