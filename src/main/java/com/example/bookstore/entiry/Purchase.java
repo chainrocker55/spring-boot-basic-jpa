@@ -13,7 +13,7 @@ public class Purchase {
 
     @JoinColumn(name = "basket_id")
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL)
     private Basket basket;
 
     private Double totalPrice;

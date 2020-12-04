@@ -1,7 +1,9 @@
 package com.example.bookstore;
 
+import com.example.bookstore.entiry.Basket;
 import com.example.bookstore.entiry.Book;
 import com.example.bookstore.entiry.Customer;
+import com.example.bookstore.entiry.Purchase;
 import com.example.bookstore.repository.BookRepository;
 import com.example.bookstore.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +40,8 @@ public class BookStoreApplication {
 		customer.setFirstname("Kachain");
 		customer.setLastname("Jantalat");
 		customerRepository.save(customer);
+
+
 
 	}
 

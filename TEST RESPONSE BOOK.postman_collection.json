@@ -1,0 +1,565 @@
+{
+	"info": {
+		"_postman_id": "44f0eaed-c8b1-43f9-b766-666574786d57",
+		"name": "TEST RESPONSE BOOK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BOOK TEST1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e27c3473-ce4b-4f83-a52c-d569407832a5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Test value response\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.bookId).to.eql(1);",
+							"    pm.expect(jsonData.bookName).to.eql(\"book_1\");",
+							"   pm.expect(jsonData.price).to.eql(100);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/book/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"book",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BOOK TEST2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2bb1eb83-ce5b-474a-8386-4c394714d8b6",
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Test value response\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.bookId).to.eql(2);",
+							"    pm.expect(jsonData.bookName).to.eql(\"book_2\");",
+							"   pm.expect(jsonData.price).to.eql(100);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/book/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"book",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BOOK TEST3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3a28ee48-1d73-4d14-835e-a8b9bd1381f5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Test value response\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.bookId).to.eql(3);",
+							"    pm.expect(jsonData.bookName).to.eql(\"book_3\");",
+							"   pm.expect(jsonData.price).to.eql(100);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/book/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"book",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BOOK TEST4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9247d59c-a645-4b81-abb6-6b792f2f3e6b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Test value response\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.bookId).to.eql(4);",
+							"    pm.expect(jsonData.bookName).to.eql(\"book_4\");",
+							"   pm.expect(jsonData.price).to.eql(100);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"customerId\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/book/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"book",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BOOK TEST5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "16d56f84-3d79-4060-962c-a4447e1ae27b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Test value response\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.bookId).to.eql(5);",
+							"    pm.expect(jsonData.bookName).to.eql(\"book_5\");",
+							"   pm.expect(jsonData.price).to.eql(100);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/book/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"book",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Build basket ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9f3d201e-0f93-4be7-a9a0-32018bd9b3a3",
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Test value response\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.basketId).to.eql(1);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customerId\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/basket/build",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"basket",
+						"build"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Basket By ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6c5a0030-bbd6-4124-a380-0d3d5db9522f",
+						"exec": [
+							"pm.test(\"Test value response\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.basketId).to.eql(1);",
+							"});",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/basket/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"basket",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer By ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "16d56f84-3d79-4060-962c-a4447e1ae27b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Test value response\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.eql(1);",
+							"    pm.expect(jsonData.fullName).to.eql(\"Kachain Jantalat\");",
+							"   pm.expect(jsonData.basket).to.eql(null);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/customer/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"customer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add book to basket",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "97a73603-f5d8-4f79-a08e-5e1d1c9ac45a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Test value response\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.books[0].id).to.eql(1);",
+							"    pm.expect(jsonData.customer.id).to.eql(1);",
+							"    pm.expect(jsonData.customer.firstname).to.eql(\"Kachain\");",
+							"    pm.expect(jsonData.customer.lastname).to.eql(\"Jantalat\");",
+							"    //pm.expect(jsonData.customer.basket).to.eql(null);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookId\":1,\n\t\"basketId\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/basket/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"basket",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c3a0249b-e4e1-43db-b667-242121069aba",
+						"exec": [
+							"pm.test(\"Test value response\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.purchaseId).to.eql(2);",
+							"});",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"basketId\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/order/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"order",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order By Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ed3ad9ec-24e3-49d5-989e-94a8926a51d7",
+						"exec": [
+							"pm.test(\"Test value response id\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.purchaseId).to.eql(2);",
+							"});",
+							"pm.test(\"Test value response total price\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.totalPrice).to.eql(100);",
+							"",
+							"});",
+							"pm.test(\"Test value response ner price\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.netPrice).to.eql(80);",
+							"});",
+							"pm.test(\"Test value response discount\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.discount).to.eql(20);",
+							"});",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/order/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"order",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "41cb9ec3-e320-461e-abda-5c9ece2a2ea2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5c523e6a-27db-477a-8f98-c8af6a59f220",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "f1fd2072-9866-4aec-a2b6-cf5f5ce762a4",
+			"key": "url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -27,7 +27,7 @@ public class PurchaseController {
         Optional<Purchase> order = purchaseRepository.findById(id);
         if (order.isPresent()) {
             PurchaseResponse response = new PurchaseResponse();
-            response.setId(order.get().getId());
+            response.setPurchaseId(order.get().getId());
             response.setBasket(order.get().getBasket());
             response.setDiscount(order.get().getDiscount());
             response.setNetPrice(order.get().getNetPrice());
@@ -35,7 +35,7 @@ public class PurchaseController {
 
             return response;
         }
-        throw new RuntimeException("Book not found with id=" + id);
+        throw new RuntimeException("Order not found with id=" + id);
 
     }
     @PostMapping("/v1/order/create")
@@ -48,11 +48,11 @@ public class PurchaseController {
             purchase.setDiscount(20.0);
             purchase.setTotalPrice(100.0);
 
-            //List<Book> books = basket.get().getBooks();
+            purchaseRepository.save(purchase);
         }
 
         PurchaseResponse response = new PurchaseResponse();
-        response.setId(purchase.getId());
+        response.setPurchaseId(purchase.getId());
         response.setBasket(purchase.getBasket());
         response.setDiscount(purchase.getDiscount());
         response.setNetPrice(purchase.getNetPrice());

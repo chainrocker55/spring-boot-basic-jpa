@@ -3,18 +3,18 @@ package com.example.bookstore.responsemodel;
 import com.example.bookstore.entiry.Basket;
 
 public class PurchaseResponse {
-    private int id;
+    private int purchaseId;
     private Basket basket;
     private double totalPrice;
     private double netPrice;
     private double discount;
 
-    public int getId() {
-        return id;
+    public int getPurchaseId() {
+        return purchaseId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPurchaseId(int purchaseId) {
+        this.purchaseId = purchaseId;
     }
 
     public Basket getBasket() {
