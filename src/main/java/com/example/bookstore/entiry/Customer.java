@@ -9,7 +9,7 @@ public class Customer {
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name = "customer_id")
     private int id;
-    private String name;
+    private String firstname;
     private String lastname;
 
 
@@ -32,12 +32,12 @@ public class Customer {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
     public String getLastname() {
