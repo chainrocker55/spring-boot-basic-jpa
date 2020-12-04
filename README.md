@@ -1,6 +1,6 @@
 # Exam java book store
 ## Design user experience
-> ![IMAGE] (./process.png)
+> ![alt IMAGE][https://kscm.kasikornbank.com:8443/Academy/basic-java-nov-2020/blob/966096-exam-book-store/process.png]
 
 ## Design database relation
 > *Book Table*
@@ -66,5 +66,11 @@
                  customerId:id 
               }                
  
+## How to run correctly
+1. please build basket before add book and find by id
+2. please create order before find order id
+3. book is already 5 type
+4. Postman may not be correct because it is auto genarate
+5. Gradle on jenkin server doesn't installed so just show step how to CICD and COPY file jar to run
 
 
