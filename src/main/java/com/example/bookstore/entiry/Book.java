@@ -15,16 +15,16 @@ public class Book {
     private Integer price;
     private int numBook;
 
-    @ManyToMany(mappedBy = "books", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-    private List<Basket> baskets = new ArrayList<>();
-
-    public List<Basket> getBaskets() {
-        return baskets;
-    }
-
-    public void setBaskets(List<Basket> baskets) {
-        this.baskets = baskets;
-    }
+//    @ManyToMany(mappedBy = "books", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+//    private List<Basket> baskets = new ArrayList<>();
+//
+//    public List<Basket> getBaskets() {
+//        return baskets;
+//    }
+//
+//    public void setBaskets(List<Basket> baskets) {
+//        this.baskets = baskets;
+//    }
 
     public int getId() {
         return id;

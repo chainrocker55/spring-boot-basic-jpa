@@ -27,7 +27,6 @@ public class BasketController {
     @PostMapping("/v1/basket/build")
     public BasketResponse createBasket(@RequestBody BasketRequest basketRequest) {
         Basket basket = new Basket();
-        //already created after project boot
         Optional<Customer> customer = customerRepository.findById(basketRequest.getCustomerId());
         if(customer.isPresent()){
             basket.setCustomer(customer.get());
@@ -72,6 +71,7 @@ public class BasketController {
             BasketResponse response = new BasketResponse();
             response.setBasketId(basket.get().getId());
             response.setBooks(basketResult.getBooks());
+            response.setCustomer(basket.get().getCustomer());
 
             return response;
         }

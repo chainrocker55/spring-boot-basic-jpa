@@ -28,7 +28,7 @@ public class Basket {
 //    @OneToOne(mappedBy = "basket", cascade = CascadeType.ALL, orphanRemoval = true, fetch=FetchType.LAZY)
 //    private Purchase purchase;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL)
     private Customer customer;
 //
 //    @OneToOne(cascade = CascadeType.ALL)
