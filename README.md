@@ -1,6 +1,6 @@
 # Exam java book store
 ## Design user experience
-> ![IMAGE][https://kscm.kasikornbank.com:8443/Academy/basic-java-nov-2020/blob/966096-exam-book-store/process.png]
+> ![alt IMAGE][https://kscm.kasikornbank.com:8443/Academy/basic-java-nov-2020/blob/966096-exam-book-store/process.png]
 
 ## Design database relation
 > *Book Table*
