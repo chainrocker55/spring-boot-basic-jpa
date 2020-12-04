@@ -1,6 +1,6 @@
 # Exam java book store
 ## Design user experience
-> [IMAGE] (./process.png)
+> ![IMAGE] (./process.png)
 
 ## Design database relation
 > *Book Table*
