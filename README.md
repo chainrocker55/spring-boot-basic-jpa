@@ -28,4 +28,43 @@
       Double discount;
       
 ## Design api service
+> **Book Service**
+* Get book by Id
+    > GET /v1/book/{id}
+* GET all book
+    > GET /v1/books> 
+                 
+> **Basket Service**
+* Build basket
+    -   POST /v1/basket/build
+        -   Request model
+            > {
+                 customerId:id
+              }
+* Add book to basket
+    -   PUT /v1/basket/add
+        -   Request model
+            > {
+                 basketId:id,
+                 bookId:id    
+              }                            
+* GET basket by Id 
+    > GET /v1/basket/{id}
+                      >
+> **Customer Service**                     
+* GET customer by Id 
+    > GET /v1/customer/{id}
+  
+> **Purchase Service**                     
+* GET order by Id 
+    > GET /v1/order/{id} 
+* Create order
+    -   POST /v1/order/create
+        -   Request model
+            > {
+                 basketId:id,
+                 customerId:id 
+              }                
+ 
+
 
