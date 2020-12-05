@@ -1,4 +1,11 @@
 # basic spring java book store
+
+How to run
+```
+./gradlew clean build
+./gradlew bootRun
+
+```
 - spring jpa
 - spring web
 - spring h2 database
@@ -7,6 +14,8 @@
 - postman automatic test
 
 ## Design user experience
+
+
 > ![alt IMAGE](https://github.com/chainrocker55/spring-boot-basic-jpa/blob/966096-exam-book-store/process.png)
 
 ## Design database relation
@@ -44,14 +53,14 @@
 > **Basket Service**
 * Build basket
     -   POST /v1/basket/build
-        -   **Request model**
+        -   *Request model*
               ```
               {
                  customerId:id
               }
 * Add book to basket
     -   PUT /v1/basket/add
-        -   **Request model**
+        -   *Request model*
             ```
               {
                  basketId:id,
@@ -70,7 +79,7 @@
 * Create order
     -   POST /v1/order/create
     
-        -   **Request model**
+        -   *Request model*
               ```
               {
                  basketId:id,
