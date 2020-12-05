@@ -44,14 +44,16 @@
 > **Basket Service**
 * Build basket
     -   POST /v1/basket/build
-        -   Request model
-            > {
+        -   **Request model**
+              ```
+              {
                  customerId:id
               }
 * Add book to basket
     -   PUT /v1/basket/add
-        -   Request model
-            > {
+        -   **Request model**
+            ```
+              {
                  basketId:id,
                  bookId:id    
               }                            
@@ -67,11 +69,13 @@
     > GET /v1/order/{id} 
 * Create order
     -   POST /v1/order/create
-        -   Request model
-              ```{
+    
+        -   **Request model**
+              ```
+              {
                  basketId:id,
                  customerId:id 
-              }```             
+              }            
  
 ## How to run correctly
 1. please build basket before add book and find by id
