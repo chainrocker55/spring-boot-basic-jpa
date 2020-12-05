@@ -68,10 +68,10 @@
 * Create order
     -   POST /v1/order/create
         -   Request model
-            > {
+              ```{
                  basketId:id,
                  customerId:id 
-              }                
+              }```             
  
 ## How to run correctly
 1. please build basket before add book and find by id
