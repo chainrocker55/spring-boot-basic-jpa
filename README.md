@@ -1,6 +1,6 @@
-# Exam java book store
+# basic spring java book store
 ## Design user experience
-> ![alt IMAGE][https://kscm.kasikornbank.com:8443/Academy/basic-java-nov-2020/blob/966096-exam-book-store/process.png]
+> ![alt IMAGE][https://github.com/chainrocker55/spring-boot-basic-jpa/blob/966096-exam-book-store/process.png]
 
 ## Design database relation
 > *Book Table*
